@@ -1,0 +1,26 @@
+# Node
+node_modules/
+
+# VSCode
+.vscode/
+
+# Sass cache
+.sass-cache/
+
+# Compiled CSS map
+css/main.css.map
+
+# Logs
+npm-debug.log
+*.log
+
+# System
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# Editor backups
+*.swp

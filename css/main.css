@@ -1,0 +1,230 @@
+@charset "UTF-8";
+/* Módulo de color (usado en _base.scss) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+  color: #333333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.btn--primary {
+  background: #6366f1;
+  color: #ffffff;
+}
+.btn--primary:hover {
+  background: #4f46e5;
+}
+.btn--secondary, .hero .btn-hero {
+  background: #ec4899;
+  color: #ffffff;
+}
+.btn--secondary:hover, .hero .btn-hero:hover {
+  /* Usar darken por compatibilidad con la configuración actual de @import */
+  background: rgb(231.202970297, 25.797029703, 127.2475247525);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Header más compacto */
+  padding: 0.6rem 1.25rem;
+  background: #6366f1;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* menos separación entre links para cabecera compacta */
+}
+nav ul a {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+nav ul a:hover {
+  color: #f59e0b;
+}
+
+/* Logo y marca dentro del nav */
+.nav__logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.nav__logo .logo {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  color: #ffffff;
+  display: block;
+  object-fit: cover; /* cubrir el contenedor circular */
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ffffff; /* fondo blanco para que el círculo siempre se vea */
+}
+
+/* Footer logo: mismo tratamiento circular que el header */
+.footer__logo .logo {
+  width: 44px;
+  height: 44px;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* Centrar logo + marca dentro del footer */
+.footer__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.footer__brand {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.nav__brand {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (min-width: 576px) {
+  header {
+    padding: 0.5rem 0.75rem;
+  }
+  .nav__logo .logo {
+    width: 40px;
+    height: 40px;
+  }
+  nav ul a {
+    font-size: 0.92rem;
+  }
+}
+.hero {
+  height: 100vh;
+  /* Gradient de fondo + imagen (si existe). La carpeta de imágenes es 'imagenes' */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagenes/hero-bg.png") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+}
+
+footer {
+  background: #4f46e5;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* Iconos sociales en footer: tamaño razonable y espaciado */
+.footer__social {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.footer__social-link {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.footer__social-link svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+/*# sourceMappingURL=main.css.map */

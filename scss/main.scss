@@ -1,0 +1,7 @@
+/* Módulo de color (usado en _base.scss) */
+@use 'sass:color' as color;
+
+@import 'variables';
+@import 'mixins';
+@import 'base';
+@import 'inicio';

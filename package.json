@@ -1,0 +1,12 @@
+{
+  "name": "proyecto-frontend",
+  "version": "1.0.0",
+  "scripts": {
+    "sass": "sass scss/main.scss css/main.css",
+    "sass:watch": "sass --watch scss/main.scss css/main.css",
+    "sass:build": "sass scss/main.scss css/main.css --style compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.94.0"
+  }
+}

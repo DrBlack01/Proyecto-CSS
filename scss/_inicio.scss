@@ -1,0 +1,170 @@
+@import 'variables';
+@import 'mixins';
+
+// 🌐 Header
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Header más compacto */
+  padding: 0.6rem 1.25rem;
+  background: $color-primary;
+  color: $color-white;
+  @include flex-between(row);
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+nav ul {
+  list-style: none;
+  @include flex-center(row);
+  gap: 1rem; /* menos separación entre links para cabecera compacta */
+
+  a {
+    color: $color-white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    @include transition(color);
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}
+
+/* Logo y marca dentro del nav */
+.nav__logo {
+  @include flex-center(row);
+  gap: 0.6rem;
+}
+
+.nav__logo .logo {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  color: $color-white;
+  display: block;
+  object-fit: cover; /* cubrir el contenedor circular */
+  border-radius: 50%;
+  overflow: hidden;
+  background: $color-white; /* fondo blanco para que el círculo siempre se vea */
+}
+
+/* Footer logo: mismo tratamiento circular que el header */
+.footer__logo .logo {
+  width: 44px;
+  height: 44px;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
+  background: $color-white;
+}
+
+/* Centrar logo + marca dentro del footer */
+.footer__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+.footer__brand {
+  color: $color-white;
+  font-weight: 700;
+}
+
+.nav__brand {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: $color-white;
+}
+
+/* Ajustes para pantallas pequeñas */
+@include respond-to(sm) {
+  header {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .nav__logo .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  nav ul a {
+    font-size: 0.92rem;
+  }
+}
+
+// 🦸 Sección Hero
+.hero {
+  height: 100vh;
+  /* Gradient de fondo + imagen (si existe). La carpeta de imágenes es 'imagenes' */
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('../imagenes/hero-bg.png') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  @include flex-center(column);
+  padding: 0 1rem;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn-hero {
+    @extend .btn--secondary;
+  }
+}
+.hero__overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+.hero__content {
+  position: relative;
+  z-index: 2;
+}
+
+
+// 🦶 Footer
+footer {
+  background: $color-primary-dark;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* Iconos sociales en footer: tamaño razonable y espaciado */
+.footer__social {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.footer__social-link {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.06);
+  border-radius: 8px;
+  color: $color-white;
+}
+.footer__social-link svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}

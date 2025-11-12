@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+  background-color: $color-bg;
+  color: $color-text;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+// 🔘 Botones globales
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  @include transition(background);
+
+  &--primary {
+    background: $color-primary;
+    color: $color-white;
+
+    &:hover {
+      background: $color-primary-dark;
+    }
+  }
+
+  &--secondary {
+    background: $color-secondary;
+    color: $color-white;
+
+    &:hover {
+      /* Usar darken por compatibilidad con la configuración actual de @import */
+      background: darken($color-secondary, 10%);
+    }
+  }
+}

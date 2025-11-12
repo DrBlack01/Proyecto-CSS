@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Proyecto </title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Compilado -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Header Fijo -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav__logo">
+                    <img src="imagenes/Academia-logo.png" alt="Logo Academia Educativa" class="logo">
+                    <span class="nav__brand">Academia Educativa</span>
+                </div>
+                
+                <ul class="nav__menu">
+                    <li class="nav__item"><a href="#inicio" class="nav__link nav__link--active">Inicio</a></li>
+                    <li class="nav__item"><a href="#servicios" class="nav__link">Servicios</a></li>
+                    <li class="nav__item"><a href="#portafolio" class="nav__link">Portafolio</a></li>
+                    <li class="nav__item"><a href="#sobre-nosotros" class="nav__link">Sobre Nosotros</a></li>
+                    <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
+                </ul>
+                
+                <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="nav__toggle-bar"></span>
+                    <span class="nav__toggle-bar"></span>
+                    <span class="nav__toggle-bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Hero -->
+    <section class="hero" id="inicio">
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <h1 class="hero__title">
+                Creamos Experiencias
+                <span class="hero__title-accent">Digitales Excepcionales</span>
+            </h1>
+            <p class="hero__description">
+                Transformamos ideas en soluciones web innovadoras que impulsan el crecimiento de tu negocio
+            </p>
+            <div class="hero__buttons">
+                <button class="btn btn--primary">
+                    Comenzar Ahora
+                    <svg class="btn__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="btn btn--secondary">Ver Portfolio</button>
+            </div>
+        </div>
+        
+        <!-- Imagen de fondo (simulada con gradiente y formas) -->
+        <div class="hero__background">
+            <div class="hero__shape hero__shape--1"></div>
+            <div class="hero__shape hero__shape--2"></div>
+            <div class="hero__shape hero__shape--3"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__logo">
+                            <img src="imagenes/Academia-logo.png" alt="MiMarca" class="logo">
+                            <span class="footer__brand">Academia Educativa</span>
+                    </div>
+                    <p class="footer__description">
+                        Creando el futuro digital, un proyecto a la vez.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="white"/>
+                                <circle cx="17.5" cy="6.5" r="1.5" fill="white"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Servicios</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Diseño Web</a></li>
+                        <li><a href="#" class="footer__link">Desarrollo Frontend</a></li>
+                        <li><a href="#" class="footer__link">Desarrollo Backend</a></li>
+                        <li><a href="#" class="footer__link">E-commerce</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Compañía</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Sobre Nosotros</a></li>
+                        <li><a href="#" class="footer__link">Equipo</a></li>
+                        <li><a href="#" class="footer__link">Carreras</a></li>
+                        <li><a href="#" class="footer__link">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Contacto</h3>
+                    <ul class="footer__links">
+                        <li><a href="mailto:info@mimarca.com" class="footer__link">info@mimarca.com</a></li>
+                        <li><a href="tel:+51123456789" class="footer__link">+51 123 456 789</a></li>
+                        <li class="footer__link">Ica, Perú</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    &copy; 2025 Academia Educativa. Todos los derechos reservados.
+                </p>
+                <div class="footer__legal">
+                    <a href="#" class="footer__legal-link">Política de Privacidad</a>
+                    <a href="#" class="footer__legal-link">Términos de Servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+        <!-- JS Principal -->
+        <script src="js/main.js" defer></script>
+</body>
+</html>
