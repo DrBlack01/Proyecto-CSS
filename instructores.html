@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructores - Academia Educativa</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Compilado -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Header Fijo -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav__logo">
+                    <img src="imagenes/Academia-logo.png" alt="Logo Academia Educativa" class="logo">
+                    <span class="nav__brand">Academia Educativa</span>
+                </div>
+                
+                <ul class="nav__menu">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="#portafolio" class="nav__link">Portafolio</a></li>
+                    <li class="nav__item"><a href="instructores.html" class="nav__link nav__link--active">Instructores</a></li>
+                    <li class="nav__item"><a href="sobre-nosotros.html" class="nav__link">Sobre Nosotros</a></li>
+                    <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
+                </ul>
+                
+                <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="nav__toggle-bar"></span>
+                    <span class="nav__toggle-bar"></span>
+                    <span class="nav__toggle-bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Header de la Página de Instructores -->
+    <section class="page-header-instructores">
+        <div class="container">
+            <h1>Nuestros Instructores</h1>
+            <p class="lead">Conoce a los expertos que guiarán tu camino tecnológico</p>
+        </div>
+    </section>
+
+    <!-- Sección de Instructores -->
+    <section class="instructores-section">
+        <div class="container">
+            <div class="instructores-grid">
+                
+                <!-- Instructor 1 -->
+                <div class="instructor-card">
+                    <div class="instructor-image">
+                        <img src="imagenes/instructores/Instructor1.jpg" alt="Laura Martínez">
+                    </div>
+                    <div class="instructor-info">
+                        <h3>Laura Martínez</h3>
+                        <p class="especialidad">Desarrollo Full Stack</p>
+                        <p class="descripcion">Especialista en JavaScript, React y Node.js para desarrollo web completo</p>
+                        <div class="social-icons">
+                            <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" title="Correo"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instructor 2 -->
+                <div class="instructor-card">
+                    <div class="instructor-image">
+                        <img src="imagenes/instructores/Instructor2.jpg" alt="Carlos Rodríguez">
+                    </div>
+                    <div class="instructor-info">
+                        <h3>Carlos Rodríguez</h3>
+                        <p class="especialidad">UX/UI Design</p>
+                        <p class="descripcion">Experto en diseño de interfaces y experiencia de usuario con Figma y Adobe XD</p>
+                        <div class="social-icons">
+                            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                            <a href="#" title="Correo"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instructor 3 -->
+                <div class="instructor-card">
+                    <div class="instructor-image">
+                        <img src="imagenes/instructores/Instructor3.jpg" alt="Miguel Ángel Torres">
+                    </div>
+                    <div class="instructor-info">
+                        <h3>Miguel Ángel Torres</h3>
+                        <p class="especialidad">Desarrollo Frontend</p>
+                        <p class="descripcion">Especialista en HTML, CSS, JavaScript y frameworks modernos de frontend</p>
+                        <div class="social-icons">
+                            <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="#" title="Correo"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instructor 4 -->
+                <div class="instructor-card">
+                    <div class="instructor-image">
+                        <img src="imagenes/instructores/Instructor4.jpg" alt="Ana Patricia Guzmán">
+                    </div>
+                    <div class="instructor-info">
+                        <h3>Ana Patricia Guzmán</h3>
+                        <p class="especialidad">Diseño Gráfico Digital</p>
+                        <p class="descripcion">Profesora de ilustración digital, branding y diseño creativo con Adobe Suite</p>
+                        <div class="social-icons">
+                            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                            <a href="#" title="Correo"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instructor 5 -->
+                <div class="instructor-card">
+                    <div class="instructor-image">
+                        <img src="imagenes/instructores/Instructor5.jpg" alt="Diana Sofía Medina">
+                    </div>
+                    <div class="instructor-info">
+                        <h3>Diana Sofía Medina</h3>
+                        <p class="especialidad">Ciencia de Datos</p>
+                        <p class="descripcion">Experta en Python, Machine Learning y análisis de datos con herramientas modernas</p>
+                        <div class="social-icons">
+                            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" title="Correo"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instructor 6 -->
+                <div class="instructor-card">
+                    <div class="instructor-image">
+                        <img src="imagenes/instructores/Instructor6.jpg" alt="Valeria Campos">
+                    </div>
+                    <div class="instructor-info">
+                        <h3>Valeria Campos</h3>
+                        <p class="especialidad">Desarrollo de Apps Móviles</p>
+                        <p class="descripcion">Especialista en React Native y Flutter para aplicaciones móviles multiplataforma</p>
+                        <div class="social-icons">
+                            <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" title="Correo"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instructor 7 -->
+                <div class="instructor-card">
+                    <div class="instructor-image">
+                        <img src="imagenes/instructores/Instructor7.jpg" alt="Roberto Hernández">
+                    </div>
+                    <div class="instructor-info">
+                        <h3>Roberto Hernández</h3>
+                        <p class="especialidad">Backend y Bases de Datos</p>
+                        <p class="descripcion">Experto en arquitecturas backend, APIs REST y bases de datos SQL y NoSQL</p>
+                        <div class="social-icons">
+                            <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="#" title="Correo"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instructor 8 -->
+                <div class="instructor-card">
+                    <div class="instructor-image">
+                        <img src="imagenes/instructores/Instructor8.jpg" alt="Gabriela Morales">
+                    </div>
+                    <div class="instructor-info">
+                        <h3>Gabriela Morales</h3>
+                        <p class="especialidad">Marketing Digital</p>
+                        <p class="descripcion">Profesora de estrategias digitales, SEO, SEM y gestión de redes sociales</p>
+                        <div class="social-icons">
+                            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                            <a href="#" title="Correo"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instructor 9 -->
+                <div class="instructor-card">
+                    <div class="instructor-image">
+                        <img src="imagenes/instructores/Instructor9.jpg" alt="Andrés Pacheco">
+                    </div>
+                    <div class="instructor-info">
+                        <h3>Andrés Pacheco</h3>
+                        <p class="especialidad">Robótica y Programación</p>
+                        <p class="descripcion">Ingeniero especializado en IoT, Arduino y programación de sistemas embebidos</p>
+                        <div class="social-icons">
+                            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" title="Correo"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__logo">
+                        <img src="imagenes/Academia-logo.png" alt="Academia Educativa" class="logo">
+                        <span class="footer__brand">Academia Educativa</span>
+                    </div>
+                    <p class="footer__description">
+                        Creando el futuro digital, un proyecto a la vez.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="white"/>
+                                <circle cx="17.5" cy="6.5" r="1.5" fill="white"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Servicios</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Desarrollo Web</a></li>
+                        <li><a href="#" class="footer__link">Programación</a></li>
+                        <li><a href="#" class="footer__link">Diseño Digital</a></li>
+                        <li><a href="#" class="footer__link">Robótica Educativa</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Compañía</h3>
+                    <ul class="footer__links">
+                        <li><a href="sobre-nosotros.html" class="footer__link">Sobre Nosotros</a></li>
+                        <li><a href="instructores.html" class="footer__link">Instructores</a></li>
+                        <li><a href="#portafolio" class="footer__link">Cursos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Contacto</h3>
+                    <ul class="footer__links">
+                        <li><a href="mailto:info@academiaeducativa.com" class="footer__link">info@academiaeducativa.com</a></li>
+                        <li><a href="tel:+51123456789" class="footer__link">+51 123 456 789</a></li>
+                        <li class="footer__link">Ica, Perú</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    &copy; 2025 Academia Educativa. Todos los derechos reservados.
+                </p>
+                <div class="footer__legal">
+                    <a href="#" class="footer__legal-link">Política de Privacidad</a>
+                    <a href="#" class="footer__legal-link">Términos de Servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Principal -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>
