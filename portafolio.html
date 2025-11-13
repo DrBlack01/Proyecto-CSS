@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cursos | Academia Educativa</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="https://kit.fontawesome.com/a2e0e6b6b3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+ <!-- Header Fijo -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav__logo">
+                    <img src="imagenes/Academia-logo.png" alt="Logo Academia Educativa" class="logo">
+                    <span class="nav__brand">Academia Educativa</span>
+                </div>
+                
+                <ul class="nav__menu">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="portafolio.html" class="nav__link">Portafolio</a></li>
+                    <li class="nav__item"><a href="instructores.html" class="nav__link nav__link--active">Instructores</a></li>
+                    <li class="nav__item"><a href="sobre-nosotros.html" class="nav__link">Sobre Nosotros</a></li>
+                    <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
+                </ul>
+                
+                <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="nav__toggle-bar"></span>
+                    <span class="nav__toggle-bar"></span>
+                    <span class="nav__toggle-bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+
+  <!-- HERO SECTION -->
+  <section class="portafolio-hero">
+    <div class="portafolio-hero__overlay"></div>
+    <div class="portafolio-hero__content">
+      <h1>
+        <span class="palabra-anim" data-index="1">NUESTROS</span>
+        <span class="palabra-anim palabra-destacada" data-index="2">CURSOS</span>
+        <span class="palabra-anim palabra-destacada" data-index="3">DE</span>
+        <span class="palabra-anim palabra-destacada" data-index="4">SISTEMAS</span>
+        <span class="palabra-anim" data-index="5">Y</span>
+        <span class="palabra-anim" data-index="6">TECNOLOGÍA</span>
+      </h1>
+      <p class="portafolio-hero__subtitle">
+        Aprende de los mejores especialistas y transforma tu futuro.
+      </p>
+    </div>
+  </section>
+
+  <!-- 🔹 FILTROS -->
+  <section class="filtros-section">
+    <div class="container">
+      <div class="filtros-wrapper">
+        <button class="filtro-btn activo" data-filtro="todos"><i class="fas fa-th"></i> Todos</button>
+        <button class="filtro-btn" data-filtro="desarrollo"><i class="fas fa-code"></i> Desarrollo</button>
+        <button class="filtro-btn" data-filtro="diseno"><i class="fas fa-palette"></i> Diseño</button>
+        <button class="filtro-btn" data-filtro="datos"><i class="fas fa-chart-line"></i> Datos</button>
+        <button class="filtro-btn" data-filtro="seguridad"><i class="fas fa-shield-alt"></i> Seguridad</button>
+        <button class="filtro-btn" data-filtro="robotica"><i class="fas fa-robot"></i> Robótica</button>
+      </div>
+    </div>
+  </section>
+
+  <!--  CURSOS -->
+  <section class="portafolio-section">
+    <div class="container">
+      <div class="cursos-grid">
+
+        <!-- Curso 1 -->
+        <article class="curso-card curso-card--principal" data-card="1" data-categoria="desarrollo">
+          <div class="curso-card__badge">
+      
+          </div>
+          <div class="curso-card__imagen-wrapper">
+            <img src="imagenes/cursos/fullstack.png" alt="Desarrollo Full Stack Profesional" class="curso-card__imagen">
+            
+          </div>
+          <div class="curso-card__contenido">
+            <h2 class="curso-card__titulo">Desarrollo Full Stack Profesional</h2>
+            <p class="curso-card__descripcion">
+              Aprende a crear aplicaciones web completas con React, Node.js y bases de datos modernas junto al especialista Roberto Hernández.
+            </p>
+            <div class="curso-card__stats">
+              <span><i class="fas fa-clock"></i> 12 semanas</span>
+              <span><i class="fas fa-users"></i> 250+ alumnos</span>
+            </div>
+            <button type="button" class="curso-card__boton curso-card__boton--principal">
+              <i class="fas fa-info-circle"></i> <span>Ver Detalles</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Curso 2 -->
+        <article class="curso-card curso-card--morado" data-card="2" data-categoria="diseno">
+          <div class="curso-card__imagen-wrapper">
+            <img src="imagenes/cursos/uxui.jpg" alt="Diseño UX/UI Profesional" class="curso-card__imagen">
+            
+          </div>
+          <div class="curso-card__contenido">
+            <h2 class="curso-card__titulo">Diseño UX/UI Profesional</h2>
+            <p class="curso-card__descripcion">
+              Aprende a crear interfaces modernas, accesibles y centradas en el usuario con la guía de Ana Patricia Guzmán.
+            </p>
+            <div class="curso-card__stats">
+              <span><i class="fas fa-clock"></i> 8 semanas</span>
+              <span><i class="fas fa-users"></i> 200+ alumnos</span>
+            </div>
+            <button type="button" class="curso-card__boton curso-card__boton--morado">
+              <i class="fas fa-info-circle"></i> <span>Ver Detalles</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Curso 3 -->
+        <article class="curso-card curso-card--exito" data-card="3" data-categoria="datos">
+          <div class="curso-card__imagen-wrapper">
+            <img src="imagenes/cursos/datascience.jpg" alt="Ciencia de Datos con Python" class="curso-card__imagen">
+            
+          </div>
+          <div class="curso-card__contenido">
+            <h2 class="curso-card__titulo">Ciencia de Datos con Python</h2>
+            <p class="curso-card__descripcion">
+              Domina el análisis de datos, Machine Learning y herramientas modernas con la experta Diana Sofía Medina.
+            </p>
+            <div class="curso-card__stats">
+              <span><i class="fas fa-clock"></i> 14 semanas</span>
+              <span><i class="fas fa-users"></i> 190+ alumnos</span>
+            </div>
+            <button type="button" class="curso-card__boton curso-card__boton--exito">
+              <i class="fas fa-info-circle"></i> <span>Ver Detalles</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Curso 4 -->
+        <article class="curso-card curso-card--rosa" data-card="4" data-categoria="desarrollo">
+          <div class="curso-card__imagen-wrapper">
+            <img src="imagenes/cursos/mobile.jpg" alt="Desarrollo de Apps Móviles" class="curso-card__imagen">
+            
+          </div>
+          <div class="curso-card__contenido">
+            <h2 class="curso-card__titulo">Desarrollo de Apps Móviles</h2>
+            <p class="curso-card__descripcion">
+              Aprende React Native y Flutter para crear aplicaciones multiplataforma guiado por Valeria Campos.
+            </p>
+            <div class="curso-card__stats">
+              <span><i class="fas fa-clock"></i> 10 semanas</span>
+              <span><i class="fas fa-users"></i> 220+ alumnos</span>
+            </div>
+            <button type="button" class="curso-card__boton curso-card__boton--rosa">
+              <i class="fas fa-info-circle"></i> <span>Ver Detalles</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Curso 5 -->
+        <article class="curso-card curso-card--peligro" data-card="5" data-categoria="robotica">
+          <div class="curso-card__imagen-wrapper">
+            <img src="imagenes/cursos/robotica.jpg" alt="Robótica y Programación" class="curso-card__imagen">
+            
+          </div>
+          <div class="curso-card__contenido">
+            <h2 class="curso-card__titulo">Robótica y Programación</h2>
+            <p class="curso-card__descripcion">
+              Diseña, programa y controla robots educativos con Arduino y sensores junto a Andrés Pacheco.
+            </p>
+            <div class="curso-card__stats">
+              <span><i class="fas fa-clock"></i> 9 semanas</span>
+              <span><i class="fas fa-users"></i> 180+ alumnos</span>
+            </div>
+            <button type="button" class="curso-card__boton curso-card__boton--peligro">
+              <i class="fas fa-info-circle"></i> <span>Ver Detalles</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Curso 6 -->
+        <article class="curso-card curso-card--cielo" data-card="6" data-categoria="desarrollo">
+          <div class="curso-card__imagen-wrapper">
+            <img src="imagenes/cursos/backend.jpg" alt="Backend y Bases de Datos" class="curso-card__imagen">
+            
+          </div>
+          <div class="curso-card__contenido">
+            <h2 class="curso-card__titulo">Backend y Bases de Datos</h2>
+            <p class="curso-card__descripcion">
+              Domina la lógica de servidores, APIs REST y bases de datos SQL/NoSQL con proyectos guiados.
+            </p>
+            <div class="curso-card__stats">
+              <span><i class="fas fa-clock"></i> 13 semanas</span>
+              <span><i class="fas fa-users"></i> 230+ alumnos</span>
+            </div>
+            <button type="button" class="curso-card__boton curso-card__boton--cielo">
+              <i class="fas fa-info-circle"></i> <span>Ver Detalles</span>
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+
+        <div class="footer__section">
+          <div class="footer__logo">
+            <img src="imagenes/Academia-logo.png" alt="Academia Educativa" class="logo">
+            <span class="footer__brand">Academia Educativa</span>
+          </div>
+          <p class="footer__description">Creando el futuro digital, un proyecto a la vez.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="white"/><circle cx="17.5" cy="6.5" r="1.5" fill="white"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__title">Servicios</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Desarrollo Web</a></li>
+            <li><a href="#" class="footer__link">Programación</a></li>
+            <li><a href="#" class="footer__link">Diseño Digital</a></li>
+            <li><a href="#" class="footer__link">Robótica Educativa</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__title">Compañía</h3>
+          <ul class="footer__links">
+            <li><a href="nosotros.html" class="footer__link">Sobre Nosotros</a></li>
+            <li><a href="instructores.html" class="footer__link">Instructores</a></li>
+            <li><a href="portafolio.html" class="footer__link">Cursos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__title">Contacto</h3>
+          <ul class="footer__links">
+            <li><a href="mailto:info@academiaeducativa.com" class="footer__link">info@academiaeducativa.com</a></li>
+            <li><a href="tel:+51123456789" class="footer__link">+51 123 456 789</a></li>
+            <li class="footer__link">Ica, Perú</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2025 Academia Educativa. Todos los derechos reservados.</p>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link">Política de Privacidad</a>
+          <a href="#" class="footer__legal-link">Términos de Servicio</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/cursoData.js"></script>
+  <script src="js/mainData.js"></script>
+
+</body>
+</html>

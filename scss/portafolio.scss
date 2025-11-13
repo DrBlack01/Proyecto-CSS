@@ -1,0 +1,829 @@
+$color-morado: #9333ea;
+$color-morado-oscuro: #7e22ce;
+$color-cielo: #0ea5e9;
+$color-cielo-oscuro: #0369a1;
+$color-exito: #10b981;
+$color-exito-oscuro: #047857;
+$color-peligro: #ef4444;
+$color-peligro-oscuro: #b91c1c;
+$color-rosa: #ec4899;
+$color-rosa-oscuro: #be185d;
+
+
+// HERO SECTION DE PORTAFOLIO
+
+.portafolio-hero {
+    background-image: url('../imagenes/Cursos/portada.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    position: relative;
+    @include flex-center(column);
+    color: $color-white;
+    padding: 120px 1rem 80px;
+    
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+            135deg,
+            rgba($color-primary, 0.85) 0%,
+            rgba($color-secondary, 0.75) 100%
+        );
+        z-index: 1;
+    }
+    
+    &__content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 1200px;
+        
+        h1 {
+            font-family: $font-display;
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 1.5rem;
+            
+            @include respond-to(md) {
+                font-size: 3.75rem;
+            }
+        }
+    }
+    
+    &__subtitle {
+        font-size: 1.25rem;
+        font-weight: 300;
+        opacity: 0;
+        animation: fadeInUp 0.5s ease-out 0.65s forwards;
+    }
+}
+
+
+
+// ANIMACIÓN DE PALABRAS EN EL TÍTULO
+
+.palabra-anim {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    animation: palabraAparece 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+    @include transition(all, 0.2s, ease-in-out);
+    cursor: pointer;
+    
+    // Delay basado en data-index
+    &[data-index="1"] { animation-delay: 0.08s; }
+    &[data-index="2"] { animation-delay: 0.16s; }
+    &[data-index="3"] { animation-delay: 0.24s; }
+    &[data-index="4"] { animation-delay: 0.32s; }
+    &[data-index="5"] { animation-delay: 0.40s; }
+    &[data-index="6"] { animation-delay: 0.48s; }
+    
+    &:hover {
+        transform: translateY(-8px) scale(1.05);
+        color: $color-morado;
+        text-shadow: 0 0 15px rgba($color-primary, 0.5);
+    }
+}
+
+.palabra-destacada {
+    color: $color-accent;
+    
+    &:hover {
+        color: $color-secondary;
+    }
+}
+
+// SECCIÓN PRINCIPAL DE CURSOS
+
+.portafolio-section {
+    padding: 80px 0;
+    background-color: $color-bg;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+
+
+// GRID DE CURSOS (Responsive y Moderno)
+
+.cursos-grid {
+    display: grid;
+    gap: 2rem;
+    
+    // Responsive breakpoints
+    @include respond-to(sm) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include respond-to(lg) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+// TARJETAS DE CURSOS
+
+.curso-card {
+    background: $color-white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid rgba($color-text, 0.1);
+    box-shadow: $shadow-sm;
+    @include transition(all, 0.35s, cubic-bezier(0.4, 0, 0.2, 1));
+    
+    // Animación de entrada escalonada
+    opacity: 0;
+    transform: translateY(30px);
+    animation: cardFadeIn 0.8s ease-out forwards;
+    
+    &[data-card="1"] { animation-delay: 0.12s; }
+    &[data-card="2"] { animation-delay: 0.24s; }
+    &[data-card="3"] { animation-delay: 0.36s; }
+    &[data-card="4"] { animation-delay: 0.48s; }
+    &[data-card="5"] { animation-delay: 0.60s; }
+    &[data-card="6"] { animation-delay: 0.72s; }
+    
+    // Efecto hover con aura de color
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px -5px rgba($color-primary, 0.4), 
+                    0 0 0 2px $color-primary;
+    }
+    
+    // Variantes de color para hover
+    &--morado:hover {
+        box-shadow: 0 10px 20px -5px rgba($color-morado, 0.4), 
+                    0 0 0 2px $color-morado;
+    }
+    
+    &--cielo:hover {
+        box-shadow: 0 10px 20px -5px rgba($color-cielo, 0.4), 
+                    0 0 0 2px $color-cielo;
+    }
+    
+    &--exito:hover {
+        box-shadow: 0 10px 20px -5px rgba($color-exito, 0.4), 
+                    0 0 0 2px $color-exito;
+    }
+    
+    &--peligro:hover {
+        box-shadow: 0 10px 20px -5px rgba($color-peligro, 0.4), 
+                    0 0 0 2px $color-peligro;
+    }
+    
+    &--rosa:hover {
+        box-shadow: 0 10px 20px -5px rgba($color-rosa, 0.4), 
+                    0 0 0 2px $color-rosa;
+    }
+    
+    // Wrapper de imagen
+    &__imagen-wrapper {
+        @include flex-center(row);
+        margin-bottom: 1rem;
+    }
+    
+    // Imagen circular
+    &__imagen {
+        width: 8rem;
+        height: 8rem;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid $color-primary;
+        @include transition(all, 0.3s);
+    }
+    
+    // Bordes de imagen según variante
+    &--morado &__imagen { border-color: $color-morado; }
+    &--cielo &__imagen { border-color: $color-cielo; }
+    &--exito &__imagen { border-color: $color-exito; }
+    &--peligro &__imagen { border-color: $color-peligro; }
+    &--rosa &__imagen { border-color: $color-rosa; }
+    
+    // Efecto hover en imagen
+    &:hover &__imagen {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 8px rgba($color-white, 0.5);
+    }
+    
+    // Contenido de la tarjeta
+    &__contenido {
+        text-align: center;
+    }
+    
+    // Título del curso
+    &__titulo {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: $color-text;
+        margin-bottom: 0.5rem;
+    }
+    
+    // Descripción
+    &__descripcion {
+        color: lighten($color-text, 30%);
+        margin-bottom: 1.5rem;
+        height: 3rem;
+        overflow: hidden;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    // Botón
+    &__boton {
+        width: 100%;
+        padding: 0.75rem;
+        border-radius: 0.75rem;
+        font-weight: 600;
+        font-size: 1.125rem;
+        color: $color-white;
+        background-color: $color-primary;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        @include transition(all, 0.2s);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        
+        i {
+            font-size: 1rem;
+        }
+        
+        
+        &:hover {
+            transform: scale(0.98);
+            box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+        }
+       
+        &--principal {
+            background-color: $color-primary;
+            &:hover { background-color: $color-primary-dark; }
+        }
+        
+        &--morado {
+            background-color: $color-morado;
+            &:hover { background-color: $color-morado-oscuro; }
+        }
+        
+        &--cielo {
+            background-color: $color-cielo;
+            &:hover { background-color: $color-cielo-oscuro; }
+        }
+        
+        &--exito {
+            background-color: $color-exito;
+            &:hover { background-color: $color-exito-oscuro; }
+        }
+        
+        &--peligro {
+            background-color: $color-peligro;
+            &:hover { background-color: $color-peligro-oscuro; }
+        }
+        
+        &--rosa {
+            background-color: $color-rosa;
+            &:hover { background-color: $color-rosa-oscuro; }
+        }
+    }
+}
+
+
+
+// ANIMACIONES
+
+@keyframes palabraAparece {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes cardFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+// SECCIÓN DE FILTROS
+
+.filtros-section {
+    padding: 30px 0;
+    background: $color-white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 60px;
+    z-index: 100;
+}
+
+.filtros-wrapper {
+    @include flex-center(row);
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filtro-btn {
+    padding: 0.6rem 1.2rem;
+    background: lighten($color-bg, 2%);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    color: $color-text;
+    font-weight: 600;
+    font-size: 0.95rem;
+    @include transition(all, 0.3s);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+    i {
+        font-size: 1rem;
+    }
+    
+    &:hover {
+        background: $color-primary;
+        color: $color-white;
+        transform: translateY(-2px);
+    }
+    
+    &.activo {
+        background: $color-primary;
+        color: $color-white;
+        border-color: $color-primary-dark;
+        box-shadow: 0 4px 12px rgba($color-primary, 0.3);
+    }
+}
+
+
+
+// BADGES Y NIVELES EN LAS TARJETAS
+
+.curso-card {
+    position: relative;
+    
+    &__badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 10;
+        
+        .badge {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            
+            &--popular {
+                background: linear-gradient(135deg, #f59e0b, #ea580c);
+                color: $color-white;
+                box-shadow: 0 2px 8px rgba(#f59e0b, 0.4);
+            }
+            
+            &--nuevo {
+                background: linear-gradient(135deg, #10b981, #059669);
+                color: $color-white;
+                box-shadow: 0 2px 8px rgba(#10b981, 0.4);
+            }
+            
+            &--demanda {
+                background: linear-gradient(135deg, #ef4444, #dc2626);
+                color: $color-white;
+                box-shadow: 0 2px 8px rgba(#ef4444, 0.4);
+            }
+        }
+    }
+    
+    &__nivel {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.8);
+        color: $color-white;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        backdrop-filter: blur(5px);
+        
+        i {
+            margin-right: 0.3rem;
+        }
+    }
+    
+    &__stats {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 1rem;
+        padding: 0.8rem;
+        background: lighten($color-bg, 2%);
+        border-radius: 8px;
+        font-size: 0.85rem;
+        
+        span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            color: $color-text;
+            
+            i {
+                color: $color-primary;
+            }
+        }
+    }
+}
+
+
+
+// ESTILOS DEL MODAL DE SWEETALERT2
+
+.modal-curso-popup {
+    border-radius: 20px !important;
+    padding: 0 !important;
+}
+
+.modal-curso-title {
+    font-family: $font-display;
+    color: $color-primary;
+    padding: 1.5rem 2rem 1rem;
+    font-size: 2rem;
+}
+
+.modal-curso {
+    text-align: left;
+    
+    &__header {
+        display: flex;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        background: lighten($color-bg, 2%);
+        margin: -1rem -1rem 1.5rem;
+        border-radius: 15px 15px 0 0;
+    }
+    
+    &__icono {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        @include flex-center(row);
+        color: $color-white;
+        font-size: 2rem;
+        flex-shrink: 0;
+    }
+    
+    &__info-principal {
+        flex: 1;
+    }
+    
+    &__badges {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 0.8rem;
+        flex-wrap: wrap;
+    }
+    
+    &__modalidad {
+        color: $color-text;
+        font-weight: 600;
+        
+        i {
+            margin-right: 0.5rem;
+        }
+    }
+    
+    &__descripcion {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: lighten($color-text, 10%);
+        margin-bottom: 1.5rem;
+    }
+    
+    &__stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+        
+        .stat-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            background: lighten($color-bg, 2%);
+            border-radius: 10px;
+            
+            i {
+                font-size: 1.5rem;
+                margin-top: 0.2rem;
+            }
+            
+            strong {
+                display: block;
+                margin-bottom: 0.3rem;
+                color: $color-text;
+            }
+            
+            p {
+                color: lighten($color-text, 20%);
+                font-size: 0.9rem;
+                margin: 0;
+            }
+        }
+    }
+    
+    &__seccion {
+        margin-bottom: 2rem;
+        
+        h3 {
+            font-size: 1.3rem;
+            color: $color-primary;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    }
+    
+    &__instructor {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        background: lighten($color-primary, 45%);
+        border-radius: 10px;
+        margin-bottom: 1.5rem;
+        
+        i {
+            font-size: 1.8rem;
+            color: $color-primary;
+        }
+        
+        strong {
+            color: $color-text;
+        }
+    }
+    
+    &__precio {
+        text-align: center;
+        padding: 1.5rem;
+        border-radius: 12px;
+        color: $color-white;
+        
+        .precio-label {
+            display: block;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+        
+        .precio-valor {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        small {
+            display: block;
+            font-size: 0.85rem;
+            opacity: 0.85;
+        }
+    }
+}
+
+.badge-modal {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    color: $color-white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    
+    i {
+        margin-right: 0.3rem;
+    }
+}
+
+.badge-certificado {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.lista-requisitos {
+    list-style: none;
+    padding: 0;
+    
+    li {
+        padding: 0.8rem 1rem;
+        margin-bottom: 0.5rem;
+        background: lighten($color-bg, 2%);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        
+        i {
+            color: $color-primary;
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.modulos-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.modulo-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: lighten($color-bg, 2%);
+    border-radius: 10px;
+    
+    .modulo-numero {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        @include flex-center(row);
+        color: $color-white;
+        font-weight: 700;
+        flex-shrink: 0;
+    }
+    
+    strong {
+        display: block;
+        color: $color-text;
+        margin-bottom: 0.3rem;
+    }
+    
+    p {
+        color: lighten($color-text, 20%);
+        font-size: 0.9rem;
+        margin: 0;
+    }
+}
+
+
+
+// FORMULARIO DE INSCRIPCIÓN
+
+.inscripcion-form {
+    text-align: left;
+    
+    h3 {
+        margin: 15px 0;
+    }
+    
+    input, select {
+        width: 100%;
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+        border: 2px solid lighten($color-text, 60%);
+        border-radius: 8px;
+        font-size: 1rem;
+        font-family: $font-primary;
+        @include transition(border, 0.3s);
+        
+        &:focus {
+            outline: none;
+            border-color: $color-primary;
+        }
+    }
+}
+
+
+
+// BOTONES DE COMPARTIR
+
+.compartir-opciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-compartir {
+    padding: 1rem;
+    border-radius: 10px;
+    color: $color-white;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    @include transition(all, 0.3s);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    
+    i {
+        font-size: 1.2rem;
+    }
+    
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.btn-whatsapp {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+}
+.btn-facebook {
+    background: linear-gradient(135deg, #1877f2, #0c5bce);
+}
+.btn-twitter {
+    background: linear-gradient(135deg, #1da1f2, #0d8bd9);
+}
+.btn-copiar {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+}
+
+
+// ============================================
+// MEDIA QUERIES ESPECÍFICAS
+// ============================================
+@media (max-width: 767px) {
+    .portafolio-hero {
+        min-height: 300px;
+        padding: 100px 1rem 60px;
+        
+        &__content h1 {
+            font-size: 2rem;
+        }
+        
+        &__subtitle {
+            font-size: 1rem;
+        }
+    }
+    
+    .filtros-wrapper {
+        gap: 0.5rem;
+    }
+    
+    .filtro-btn {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.9rem;
+    }
+    
+    .portafolio-section {
+        padding: 60px 0;
+    }
+    
+    .cursos-grid {
+        gap: 1.5rem;
+    }
+    
+    .curso-card {
+        &__imagen {
+            width: 7rem;
+            height: 7rem;
+        }
+        
+        &__descripcion {
+            height: auto;
+        }
+        
+        &__stats {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+    }
+    
+    .modal-curso-title {
+        font-size: 1.5rem;
+    }
+    
+    .modal-curso__stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .compartir-opciones {
+        grid-template-columns: 1fr;
+    }
+}
