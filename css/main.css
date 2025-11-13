@@ -768,5 +768,730 @@ footer {
     align-items: center;
   }
 }
+.portafolio-hero {
+  background-image: url('../imagenes/Cursos/portada.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  padding: 120px 1rem 80px;
+}
+.portafolio-hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(56, 50, 50, 0.85) 0%, rgba(64, 63, 62, 0.75) 100%);
+  z-index: 1;
+}
+.portafolio-hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 1200px;
+}
+.portafolio-hero__content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+  .portafolio-hero__content h1 {
+    font-size: 3.75rem;
+  }
+}
+.portafolio-hero__subtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out 0.65s forwards;
+}
+
+.palabra-anim {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
+  animation: palabraAparece 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.palabra-anim[data-index="1"] {
+  animation-delay: 0.08s;
+}
+.palabra-anim[data-index="2"] {
+  animation-delay: 0.16s;
+}
+.palabra-anim[data-index="3"] {
+  animation-delay: 0.24s;
+}
+.palabra-anim[data-index="4"] {
+  animation-delay: 0.32s;
+}
+.palabra-anim[data-index="5"] {
+  animation-delay: 0.4s;
+}
+.palabra-anim[data-index="6"] {
+  animation-delay: 0.48s;
+}
+.palabra-anim:hover {
+  transform: translateY(-8px) scale(1.05);
+  color: #9333ea;
+  text-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+}
+
+.palabra-destacada {
+  color: #f59e0b;
+}
+.palabra-destacada:hover {
+  color: #ec4899;
+}
+
+.portafolio-section {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.cursos-grid {
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 576px) {
+  .cursos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .cursos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.curso-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(51, 51, 51, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardFadeIn 0.8s ease-out forwards;
+}
+.curso-card[data-card="1"] {
+  animation-delay: 0.12s;
+}
+.curso-card[data-card="2"] {
+  animation-delay: 0.24s;
+}
+.curso-card[data-card="3"] {
+  animation-delay: 0.36s;
+}
+.curso-card[data-card="4"] {
+  animation-delay: 0.48s;
+}
+.curso-card[data-card="5"] {
+  animation-delay: 0.6s;
+}
+.curso-card[data-card="6"] {
+  animation-delay: 0.72s;
+}
+.curso-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px -5px rgba(99, 102, 241, 0.4), 0 0 0 2px #6366f1;
+}
+.curso-card--morado:hover {
+  box-shadow: 0 10px 20px -5px rgba(147, 51, 234, 0.4), 0 0 0 2px #9333ea;
+}
+.curso-card--cielo:hover {
+  box-shadow: 0 10px 20px -5px rgba(14, 165, 233, 0.4), 0 0 0 2px #0ea5e9;
+}
+.curso-card--exito:hover {
+  box-shadow: 0 10px 20px -5px rgba(16, 185, 129, 0.4), 0 0 0 2px #10b981;
+}
+.curso-card--peligro:hover {
+  box-shadow: 0 10px 20px -5px rgba(239, 68, 68, 0.4), 0 0 0 2px #ef4444;
+}
+.curso-card--rosa:hover {
+  box-shadow: 0 10px 20px -5px rgba(236, 72, 153, 0.4), 0 0 0 2px #ec4899;
+}
+.curso-card__imagen-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.curso-card__imagen {
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #6366f1;
+  transition: all 0.3s ease;
+}
+.curso-card--morado .curso-card__imagen {
+  border-color: #9333ea;
+}
+.curso-card--cielo .curso-card__imagen {
+  border-color: #0ea5e9;
+}
+.curso-card--exito .curso-card__imagen {
+  border-color: #10b981;
+}
+.curso-card--peligro .curso-card__imagen {
+  border-color: #ef4444;
+}
+.curso-card--rosa .curso-card__imagen {
+  border-color: #ec4899;
+}
+.curso-card:hover .curso-card__imagen {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.5);
+}
+.curso-card__contenido {
+  text-align: center;
+}
+.curso-card__titulo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+.curso-card__descripcion {
+  color: rgb(127.5, 127.5, 127.5);
+  margin-bottom: 1.5rem;
+  height: 3rem;
+  overflow: hidden;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.curso-card__boton {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #ffffff;
+  background-color: #6366f1;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.curso-card__boton i {
+  font-size: 1rem;
+}
+.curso-card__boton:hover {
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+.curso-card__boton--principal {
+  background-color: #6366f1;
+}
+.curso-card__boton--principal:hover {
+  background-color: #4f46e5;
+}
+.curso-card__boton--morado {
+  background-color: #9333ea;
+}
+.curso-card__boton--morado:hover {
+  background-color: #7e22ce;
+}
+.curso-card__boton--cielo {
+  background-color: #0ea5e9;
+}
+.curso-card__boton--cielo:hover {
+  background-color: #0369a1;
+}
+.curso-card__boton--exito {
+  background-color: #10b981;
+}
+.curso-card__boton--exito:hover {
+  background-color: #047857;
+}
+.curso-card__boton--peligro {
+  background-color: #ef4444;
+}
+.curso-card__boton--peligro:hover {
+  background-color: #b91c1c;
+}
+.curso-card__boton--rosa {
+  background-color: #ec4899;
+}
+.curso-card__boton--rosa:hover {
+  background-color: #be185d;
+}
+
+@keyframes palabraAparece {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes cardFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.filtros-section {
+  padding: 30px 0;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 60px; 
+  z-index: 100;
+}
+
+.filtros-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filtro-btn {
+  padding: 0.6rem 1.2rem;
+  background: rgb(254.1, 254.1, 254.1);
+  border: 2px solid transparent;
+  border-radius: 8px;
+  color: #333333;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.filtro-btn i {
+  font-size: 1rem;
+}
+.filtro-btn:hover {
+  background: #6366f1;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+.filtro-btn.activo {
+  background: #6366f1;
+  color: #ffffff;
+  border-color: #4f46e5;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.curso-card {
+  position: relative;
+}
+.curso-card__badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+}
+.curso-card__badge .badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.curso-card__badge .badge--popular {
+  background: linear-gradient(135deg, #f59e0b, #ea580c);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+}
+.curso-card__badge .badge--nuevo {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+}
+.curso-card__badge .badge--demanda {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
+}
+.curso-card__nivel {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  backdrop-filter: blur(5px);
+}
+.curso-card__nivel i {
+  margin-right: 0.3rem;
+}
+.curso-card__stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  background: rgb(254.1, 254.1, 254.1);
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+.curso-card__stats span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #333333;
+}
+.curso-card__stats span i {
+  color: #6366f1;
+}
+
+.modal-curso-popup {
+  border-radius: 20px !important;
+  padding: 0 !important;
+}
+
+.modal-curso-title {
+  font-family: "Playfair Display", serif;
+  color: #6366f1;
+  padding: 1.5rem 2rem 1rem;
+  font-size: 2rem;
+}
+
+.modal-curso {
+  text-align: left;
+}
+.modal-curso__header {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: rgb(254.1, 254.1, 254.1);
+  margin: -1rem -1rem 1.5rem;
+  border-radius: 15px 15px 0 0;
+}
+.modal-curso__icono {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+.modal-curso__info-principal {
+  flex: 1;
+}
+.modal-curso__badges {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+  flex-wrap: wrap;
+}
+.modal-curso__modalidad {
+  color: #333333;
+  font-weight: 600;
+}
+.modal-curso__modalidad i {
+  margin-right: 0.5rem;
+}
+.modal-curso__descripcion {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgb(76.5, 76.5, 76.5);
+  margin-bottom: 1.5rem;
+}
+.modal-curso__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.modal-curso__stats .stat-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgb(254.1, 254.1, 254.1);
+  border-radius: 10px;
+}
+.modal-curso__stats .stat-item i {
+  font-size: 1.5rem;
+  margin-top: 0.2rem;
+}
+.modal-curso__stats .stat-item strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #333333;
+}
+.modal-curso__stats .stat-item p {
+  color: #666666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+.modal-curso__seccion {
+  margin-bottom: 2rem;
+}
+.modal-curso__seccion h3 {
+  font-size: 1.3rem;
+  color: #6366f1;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.modal-curso__instructor {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+.modal-curso__instructor i {
+  font-size: 1.8rem;
+  color: #6366f1;
+}
+.modal-curso__instructor strong {
+  color: #333333;
+}
+.modal-curso__precio {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: #ffffff;
+}
+.modal-curso__precio .precio-label {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+.modal-curso__precio .precio-valor {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.modal-curso__precio small {
+  display: block;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.badge-modal {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.badge-modal i {
+  margin-right: 0.3rem;
+}
+
+.badge-certificado {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.lista-requisitos {
+  list-style: none;
+  padding: 0;
+}
+.lista-requisitos li {
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.5rem;
+  background: rgb(254.1, 254.1, 254.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.lista-requisitos li i {
+  color: #6366f1;
+  font-size: 0.8rem;
+}
+
+.modulos-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.modulo-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgb(254.1, 254.1, 254.1);
+  border-radius: 10px;
+}
+.modulo-card .modulo-numero {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.modulo-card strong {
+  display: block;
+  color: #333333;
+  margin-bottom: 0.3rem;
+}
+.modulo-card p {
+  color: #666666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.inscripcion-form {
+  text-align: left;
+}
+.inscripcion-form h3 {
+  margin: 15px 0;
+}
+.inscripcion-form input, .inscripcion-form select {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 2px solid #cccccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  transition: border 0.3s ease;
+}
+.inscripcion-form input:focus, .inscripcion-form select:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+.compartir-opciones {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-compartir {
+  padding: 1rem;
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.btn-compartir i {
+  font-size: 1.2rem;
+}
+.btn-compartir:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+}
+
+.btn-facebook {
+  background: linear-gradient(135deg, #1877f2, #0c5bce);
+}
+
+.btn-twitter {
+  background: linear-gradient(135deg, #1da1f2, #0d8bd9);
+}
+
+.btn-copiar {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+}
+
+@media (max-width: 767px) {
+  .portafolio-hero {
+    min-height: 300px;
+    padding: 100px 1rem 60px;
+  }
+  .portafolio-hero__content h1 {
+    font-size: 2rem;
+  }
+  .portafolio-hero__subtitle {
+    font-size: 1rem;
+  }
+  .filtros-wrapper {
+    gap: 0.5rem;
+  }
+  .filtro-btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.9rem;
+  }
+  .portafolio-section {
+    padding: 60px 0;
+  }
+  .cursos-grid {
+    gap: 1.5rem;
+  }
+  .curso-card__imagen {
+    width: 7rem;
+    height: 7rem;
+  }
+  .curso-card__descripcion {
+    height: auto;
+  }
+  .curso-card__stats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .modal-curso-title {
+    font-size: 1.5rem;
+  }
+  .modal-curso__stats {
+    grid-template-columns: 1fr;
+  }
+  .compartir-opciones {
+    grid-template-columns: 1fr;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
